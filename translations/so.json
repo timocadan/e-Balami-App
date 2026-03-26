@@ -1,0 +1,215 @@
+{
+  "home": {
+    "title": "Adeeg Noocee ah ayaad ubaahan tahay?",
+    "medicalServices": "Adeegyada Safarka Caafimaad",
+    "technicalServices": "Adeegyada Farsamo-yaqaanka"
+  },
+  "farsamo": {
+    "title": "Qaybta Adeegyada Farsamo-yaqaanka",
+    "subtitle": "Guji adeegga kugu habboon si aad u bilowdo dalabkaaga.",
+    "marquee": "Dalbo Farsamo-yaqaan kasta oo aad Rabto.",
+    "bookNow": "Dalbo Hadda",
+    "services": {
+      "homeOfficeRepair": "Dayactirka Qalabka Guryaha iyo Xafiiska",
+      "electrician": "Farsamo-yaqaan Koronto",
+      "plumber": "Farsamo-yaqaan Biyo (Plumber)",
+      "construction": "Adeegyada Dhismaha",
+      "technology": "Adeegyada Tiknoolajiyadda",
+      "carRepair": "Dayactirka Gaadiidka",
+      "events": "Adeegyada Munaasabadaha",
+      "other": "Adeegyo Kale"
+    },
+    "location": {
+      "title": "Halkeed joogtaa?",
+      "placeholder": "Qor magaalada...",
+      "alert": "Fadlan liiska ka dooro magaalo sax ah.",
+      "alertTitle": "Fiiro Gaar Ah",
+      "next": "Xiga",
+      "cities": {
+        "Jigjiga": "Jigjiga",
+        "Dire Dawa": "Dire Dawa",
+        "Mogadishu": "Muqdisho",
+        "Hargaysa": "Hargeysa",
+        "Garoowe": "Garoowe",
+        "Bosaso": "Boosaaso"
+      }
+    },
+    "form": {
+      "fullName": "Magacaaga oo Dhammaystiran",
+      "fullNamePlaceholder": "Geli magacaaga",
+      "email": "Email",
+      "emailPlaceholder": "tusaale@gmail.com",
+      "phone": "Lambarka Taleefanka",
+      "address": "Goobta uu Farsamo-yaqaanku kuugu imaanayo",
+      "addressPlaceholder": "Tusaale: Guryaha Xildhibaanada ee Garabcase agtooda",
+      "next": "Xiga",
+      "errors": {
+        "nameRequired": "Fadlan geli magacaaga.",
+        "emailInvalid": "Fadlan geli email sax ah.",
+        "phoneInvalid": "Fadlan geli lambar taleefan oo sax ah oo la jaanqaadaya furaha dalka aad dooratay.",
+        "addressRequired": "Fadlan geli cinwaankaaga oo faahfaahsan.",
+        "firebaseError": "Cilad ayaa timid. Fadlan isku day mar kale.",
+        "errorTitle": "Cilad Firebase"
+      },
+      "errorTitle": "Khalad",
+      "phoneErrorTitle": "Khalad Lambar"
+    },
+    "details": {
+      "title": "Faahfaahi Baahidaada",
+      "subtitle": "Si kooban noogu sheeg shaqada laguu qabanayo",
+      "placeholder": "Tusaale: Deynabadii biyaha qaadeysay ayaa iga ciladeysan...",
+      "charactersLeft": "xaraf ayaa kuu harsan",
+      "next": "Xiga",
+      "errors": {
+        "lengthInvalid": "Faahfaahintu waa inay u dhaxaysaa 10 ilaa 50 xaraf.",
+        "documentNotFound": "Lama Helin Aqoonsigii Dalabka. Fadlan dib uga soo bilow.",
+        "updateError": "Lama cusboonaysiin karin xogta. Fadlan isku day mar kale.",
+        "errorTitle": "Cilad Halis ah",
+        "firebaseError": "Cilad Firebase"
+      },
+      "alertTitle": "Fiiro Gaar Ah"
+    },
+    "bixinta": {
+      "title": "Soo Koobid & Xaqiijin",
+      "customer": "MACMIILKA",
+      "service": "ADEEGGA LA DOORTAY",
+      "details": "FAAHFAAHINTA SHAQADA",
+      "confirmButton": "Xaqiiji Dalabka"
+    },
+    "success": {
+      "title": "Hambalyo!",
+      "message": "Dalabkaaga {serviceName} waa la xaqiijiyey. Farsamo-yaqaanka ayaa kula soo hadli doona.",
+      "backToHome": "Ku laabo Bogga Hore"
+    }
+  },
+  "caafimaad": {
+    "title": "Qaybta Adeegyada Safarka Caafimaad",
+    "subtitle": "Fadlan dooro adeegga aad u baahan tahay.",
+    "marquee": "Waxaan Nahay Wehelka Safarkaaga Caafimaad",
+    "bookPackage": "Dalbo Xirmo Dhammaystiran",
+    "services": {
+      "hotelBooking": "Ballanso Hotel",
+      "hospitalBooking": "Ballanso Hospital",
+      "translator": "Turjumaan",
+      "airportTaxi": "Taxi-ga Garoonka",
+      "flightTicket": "Tigidhka Diyaaradda",
+      "other": "Adeegyo Dheeraad ah"
+    },
+    "additionalServices": {
+      "title": "Adeegyo Dheeraad ah",
+      "visaHelp": "Caawimaada Fiisaha",
+      "embassyBooking": "Ballan Qabashada Safaarada",
+      "close": "Xir"
+    },
+    "whatsappError": "Hubi inaad WhatsApp ku haysato taleefankaaga.",
+    "whatsappErrorTitle": "Cilad",
+    "servicesSelection": {
+      "packageTitle": "Xidhmo Dhamaystiran",
+      "packageSubtitle": "Waad ka saari kartaa haduu jiro adeeg aadan rabin.",
+      "singleTitle": "Adeeggaaga",
+      "singleSubtitle": "Ma rabtaa inaad ku darsato adeegyo kale?",
+      "next": "Xiga",
+      "errors": {
+        "noServiceSelected": "Fadlan dooro ugu yaraan hal adeeg.",
+        "firebaseError": "Cilad ayaa timid. Fadlan hubi internet-kaaga.",
+        "errorTitle": "Fiiro Gaar Ah",
+        "firebaseErrorTitle": "Cilad Firebase",
+        "cannotRemove": "Kama saari kartid adeeggan asalka ah.",
+        "cannotRemoveTitle": "Tixgelin"
+      }
+    },
+    "location": {
+      "title": "Xaggeed u socotaa?",
+      "placeholder": "Qor magaalada...",
+      "next": "Xiga",
+      "cities": {
+        "Jigjiga": "Jigjiga",
+        "Addis Ababa": "Addis Ababa",
+        "Dire Dawa": "Diri Dhaba",
+        "Harer": "Harer",
+        "Hyderabad": "Hayderabaad",
+        "Caira": "Qaahiro"
+      },
+      "countries": {
+        "Ethiopia": "Itoobiya",
+        "India": "Hindiya",
+        "Masar": "Masar"
+      },
+      "errors": {
+        "noLocationSelected": "Fadlan liiska ka ka dooro magaalooyin ka aan ka hawlgelno.",
+        "noRequestId": "Lama Helin Aqoonsigii Dalabka.",
+        "updateError": "Lama cusboonaysiin karo xogta.",
+        "errorTitle": "Fiiro Gaar Ah",
+        "errorTitleCritical": "Cilad Halis ah",
+        "firebaseError": "Cilad Firebase"
+      }
+    },
+    "form": {
+      "fullName": "Magaca oo Dhammaystiran",
+      "fullNamePlaceholder": "Geli magacaaga",
+      "email": "Email",
+      "emailPlaceholder": "tusaale@gmail.com",
+      "age": "Da'da",
+      "agePlaceholder": "Tusaale: Jigjiga",
+      "city": "Magaalada aad Hadda Joogto",
+      "phone": "Lambarka Taleefanka",
+      "address": "Goobta",
+      "addressPlaceholder": "Tusaale: Hotel-ka Ambassador",
+      "next": "Xiga",
+      "errors": {
+        "nameRequired": "Fadlan geli magac sax ah.",
+        "emailInvalid": "Fadlan geli email sax ah.",
+        "phoneInvalid": "Fadlan geli lambar taleefan oo sax ah.",
+        "requestIdNotFound": "Lama helin aqoonsigii dalabka.",
+        "firebaseError": "Cilad ayaa timid. Fadlan isku day mar kale.",
+        "errorTitle": "Khalad",
+        "errorTitleCritical": "Cilad Halis Ah",
+        "firebaseErrorTitle": "Cilad Firebase"
+      }
+    },
+    "bixinta": {
+      "title": "Soo Koobid & Xaqiijin",
+      "customer": "MACMIILKA",
+      "services": "ADEEGYADA LA DOORTAY",
+      "confirmButton": "Xaqiiji Dalabka"
+    },
+    "success": {
+      "title": "Hambalyo!",
+      "message": "Dalabkaaga waa la xaqiijiyey. Goordhaw waxaa kula soo hadli doona shaqaalaha e-Balami.",
+      "backToHome": "Ku laabo Bogga Hore"
+    }
+  },
+  "common": {
+    "next": "Xiga",
+    "back": "Dib",
+    "close": "Xir",
+    "loading": "Waa la socdaa..."
+  },
+  "tabs": {
+    "home": "Bogga Hore",
+    "about": "Nagu Saabsan",
+    "contact": "Nala Xiriir"
+  },
+  "about": {
+    "title": "Waa maxay e-Balami?",
+    "description": "e-Balami waa brand Soomaaliyeed oo lagu kalsoon yahay, kaas oo loo aas-aasay si loola dagaallamo dhiig-miiratada loona bixiyo adeegyo hufan oo la isku halleyn karo. Magaca \"e-Balami\" micnihiisu waa \"Ballan ii qabo.\"",
+    "missionTitle": "Hadafkayaga",
+    "missionDescription": "Hadafkayagu waa inaan dhisno buundada kalsoonida ee isku xidha macmiilka iyo adeeg-bixiyaha.",
+    "valuesTitle": "Qiyamkayaga (Our Values)",
+    "values": {
+      "trust": "Kalsooni iyo Daah-furnaan",
+      "care": "Daryeel Macmiil oo Gaar ah",
+      "service": "Adeeg Casri ah oo Tayo leh",
+      "expertise": "Xirfad-sare iyo Hawlkarnimo"
+    }
+  },
+  "contact": {
+    "title": "Nala soo Xiriir",
+    "subtitle": "Diyaar ayaan unahay inaan ku caawino. Fadlan nala soo xiriir adigoo taabanaya lambarada iyo ciwaanadan hoose.",
+    "phone": "Our Main Office",
+    "whatsapp": "Whatsapp Number",
+    "email": "Send Us Email",
+    "website": "Visit Our Website"
+  }
+}
+

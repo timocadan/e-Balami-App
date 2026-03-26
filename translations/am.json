@@ -1,0 +1,215 @@
+{
+  "home": {
+    "title": "ምን ዓይነት አገልግሎት ይፈልጋሉ?",
+    "medicalServices": "የጤና ጉዞ አገልግሎቶች",
+    "technicalServices": "የቴክኒካል አገልግሎቶች"
+  },
+  "farsamo": {
+    "title": "የቴክኒካል አገልግሎቶች ክፍል",
+    "subtitle": "የእርስዎን ጥያቄ ለመጀመር የሚመለከትዎትን አገልግሎት ይጫኑ።",
+    "marquee": "የሚፈልጉትን ማንኛውንም ቴክኒሻን ይዘዙ።",
+    "bookNow": "አሁን ይዘዙ",
+    "services": {
+      "homeOfficeRepair": "የቤት እና ቢሮ መሳሪያዎች ጥገና",
+      "electrician": "ኤሌክትሪሻን",
+      "plumber": "የውሃ ባለሙያ",
+      "construction": "የግንባታ አገልግሎቶች",
+      "technology": "የቴክኖሎጂ አገልግሎቶች",
+      "carRepair": "የመኪና ጥገና",
+      "events": "የዝግጅት አገልግሎቶች",
+      "other": "ሌሎች አገልግሎቶች"
+    },
+    "location": {
+      "title": "የት ነው የሚገኙት?",
+      "placeholder": "ከተማውን ይተይቡ...",
+      "alert": "እባክዎን ከዝርዝሩ ትክክለኛ ከተማ ይምረጡ።",
+      "alertTitle": "ትኩረት",
+      "next": "ቀጣይ",
+      "cities": {
+        "Jigjiga": "ጅጅጋ",
+        "Dire Dawa": "ድሬ ዳዋ",
+        "Mogadishu": "ሞቃዲሾ",
+        "Hargaysa": "ሐርጌይሳ",
+        "Garoowe": "ጋሮዌ",
+        "Bosaso": "ቦሳሶ"
+      }
+    },
+    "form": {
+      "fullName": "ሙሉ ስምዎ",
+      "fullNamePlaceholder": "ስምዎን ያስገቡ",
+      "email": "ኢሜይል",
+      "emailPlaceholder": "ምሳሌ@gmail.com",
+      "phone": "የስልክ ቁጥር",
+      "address": "ቴክኒሻኑ የሚመጣበት ቦታ",
+      "addressPlaceholder": "ምሳሌ: በጋራብካሴ አካባቢ የMP ቤቶች",
+      "next": "ቀጣይ",
+      "errors": {
+        "nameRequired": "እባክዎን ስምዎን ያስገቡ።",
+        "emailInvalid": "እባክዎን ትክክለኛ ኢሜይል ያስገቡ።",
+        "phoneInvalid": "እባክዎን የመረጡትን የአገር ኮድ ያካተተ ትክክለኛ የስልክ ቁጥር ያስገቡ።",
+        "addressRequired": "እባክዎን ዝርዝር አድራሻዎን ያስገቡ።",
+        "firebaseError": "ስህተት ተፈጥሯል። እባክዎን እንደገና ይሞክሩ።",
+        "errorTitle": "Cilad Firebase"
+      },
+      "errorTitle": "ስህተት",
+      "phoneErrorTitle": "የስልክ ስህተት"
+    },
+    "details": {
+      "title": "ፍላጎትዎን ይግለጹ",
+      "subtitle": "ለእርስዎ የሚከናወን ስራ በአጭር ይንገሩን",
+      "placeholder": "ምሳሌ: የተሰበረው የውሃ ቧንቧ ችግር ይፈጥርልኛል...",
+      "charactersLeft": "ገላጮች ይቀራሉ",
+      "next": "ቀጣይ",
+      "errors": {
+        "lengthInvalid": "መግለጫው በ10 እና 50 ገላጮች መካከል መሆን አለበት።",
+        "documentNotFound": "የጥያቄ መለያ አልተገኘም። እባክዎን እንደገና ይጀምሩ።",
+        "updateError": "ውሂቡን ማዘመን አልተቻለም። እባክዎን እንደገና ይሞክሩ።",
+        "errorTitle": "አስቸኳይ ስህተት",
+        "firebaseError": "Cilad Firebase"
+      },
+      "alertTitle": "ትኩረት"
+    },
+    "bixinta": {
+      "title": "ማጠቃለያ እና ማረጋገጫ",
+      "customer": "ደንበኛ",
+      "service": "የተመረጠ አገልግሎት",
+      "details": "የስራ ዝርዝሮች",
+      "confirmButton": "ጥያቄውን ያረጋግጡ"
+    },
+    "success": {
+      "title": "እንኳን ደስ አለዎት!",
+      "message": "የ{serviceName} ጥያቄዎ ተረጋግጧል። ቴክኒሻኑ ያገናኝዎታል።",
+      "backToHome": "ወደ መነሻ ተመለስ"
+    }
+  },
+  "caafimaad": {
+    "title": "የጤና ጉዞ አገልግሎቶች ክፍል",
+    "subtitle": "እባክዎን የሚፈልጉትን አገልግሎት ይምረጡ።",
+    "marquee": "እኛ የጤና ጉዞዎ ጓደኛዎ ነን",
+    "bookPackage": "ሙሉ ጥቅል ይዘዙ",
+    "services": {
+      "hotelBooking": "የሆቴል ምዝግብ",
+      "hospitalBooking": "የሆስፒታል ምዝግብ",
+      "translator": "ተርጉማሪ",
+      "airportTaxi": "የአውሮፕላን ማረፊያ ታክሲ",
+      "flightTicket": "የአውሮፕላን ትኬት",
+      "other": "ተጨማሪ አገልግሎቶች"
+    },
+    "additionalServices": {
+      "title": "ተጨማሪ አገልግሎቶች",
+      "visaHelp": "የቪዛ እርዳታ",
+      "embassyBooking": "የምክትል ቤት ምዝግብ",
+      "close": "ዝጋ"
+    },
+    "whatsappError": "በስልክዎ ላይ WhatsApp እንዳለዎት ያረጋግጡ።",
+    "whatsappErrorTitle": "ስህተት",
+    "servicesSelection": {
+      "packageTitle": "ሙሉ ጥቅል",
+      "packageSubtitle": "ካልፈለጉት አገልግሎት ካለ ማስወገድ ይችላሉ።",
+      "singleTitle": "የእርስዎ አገልግሎት",
+      "singleSubtitle": "ተጨማሪ አገልግሎቶች ማክሰር ይፈልጋሉ?",
+      "next": "ቀጣይ",
+      "errors": {
+        "noServiceSelected": "እባክዎን ቢያንስ አንድ አገልግሎት ይምረጡ።",
+        "firebaseError": "ስህተት ተፈጥሯል። እባክዎን ኢንተርኔትዎን ያረጋግጡ።",
+        "errorTitle": "ትኩረት",
+        "firebaseErrorTitle": "Cilad Firebase",
+        "cannotRemove": "ይህን የመጀመሪያ አገልግሎት ማስወገድ አይችሉም።",
+        "cannotRemoveTitle": "ማስታወሻ"
+      }
+    },
+    "location": {
+      "title": "ወዴት ነው የሚሄዱት?",
+      "placeholder": "ከተማውን ይተይቡ...",
+      "next": "ቀጣይ",
+      "cities": {
+        "Jigjiga": "ጅጅጋ",
+        "Addis Ababa": "አዲስ አበባ",
+        "Dire Dawa": "ድሬ ዳዋ",
+        "Harer": "ሐረር",
+        "Hyderabad": "ሃይድራባድ",
+        "Caira": "ካይሮ"
+      },
+      "countries": {
+        "Ethiopia": "ኢትዮጵያ",
+        "India": "ህንድ",
+        "Masar": "ግብጽ"
+      },
+      "errors": {
+        "noLocationSelected": "እባክዎን ከዝርዝሩ ትክክለኛ ከተማ ይምረጡ።",
+        "noRequestId": "የጥያቄ መለያ አልተገኘም።",
+        "updateError": "ውሂቡን ማዘመን አልተቻለም።",
+        "errorTitle": "ትኩረት",
+        "errorTitleCritical": "አስቸኳይ ስህተት",
+        "firebaseError": "Cilad Firebase"
+      }
+    },
+    "form": {
+      "fullName": "ሙሉ ስም",
+      "fullNamePlaceholder": "ስምዎን ያስገቡ",
+      "email": "ኢሜይል",
+      "emailPlaceholder": "ምሳሌ@gmail.com",
+      "age": "ዕድሜ",
+      "agePlaceholder": "ምሳሌ: ጅጅጋ",
+      "city": "አሁን የሚኖሩበት ከተማ",
+      "phone": "የስልክ ቁጥር",
+      "address": "ቦታ",
+      "addressPlaceholder": "ምሳሌ: አምባሳደር ሆቴል",
+      "next": "ቀጣይ",
+      "errors": {
+        "nameRequired": "እባክዎን ትክክለኛ ስም ያስገቡ።",
+        "emailInvalid": "እባክዎን ትክክለኛ ኢሜይል ያስገቡ።",
+        "phoneInvalid": "እባክዎን ትክክለኛ የስልክ ቁጥር ያስገቡ።",
+        "requestIdNotFound": "የጥያቄ መለያ አልተገኘም።",
+        "firebaseError": "ስህተት ተፈጥሯል። እባክዎን እንደገና ይሞክሩ።",
+        "errorTitle": "ስህተት",
+        "errorTitleCritical": "አስቸኳይ ስህተት",
+        "firebaseErrorTitle": "Cilad Firebase"
+      }
+    },
+    "bixinta": {
+      "title": "ማጠቃለያ እና ማረጋገጫ",
+      "customer": "ደንበኛ",
+      "services": "የተመረጡ አገልግሎቶች",
+      "confirmButton": "ጥያቄውን ያረጋግጡ"
+    },
+    "success": {
+      "title": "እንኳን ደስ አለዎት!",
+      "message": "ጥያቄዎ ተረጋግጧል። የe-Balami ሰራተኞች በቅርብ ጊዜ ያገናኝዎታል።",
+      "backToHome": "ወደ መነሻ ተመለስ"
+    }
+  },
+  "common": {
+    "next": "ቀጣይ",
+    "back": "ተመለስ",
+    "close": "ዝጋ",
+    "loading": "በመጫን ላይ..."
+  },
+  "tabs": {
+    "home": "መነሻ",
+    "about": "ስለእኛ",
+    "contact": "ያግኙን"
+  },
+  "about": {
+    "title": "e-Balami ምንድን ነው?",
+    "description": "e-Balami የታመነ የሶማሊያ ምርት ስም ነው፣ ለማጭበርበር ለመጋፈጥ እና አስተማማኝ፣ ተደራሽ አገልግሎቶችን ለመስጠት የተመሰረተ ነው። \"e-Balami\" የሚለው ስም \"ለእኔ ይዘዙ\" ማለት ነው።",
+    "missionTitle": "የእኛ ተልዕኮ",
+    "missionDescription": "የእኛ ተልዕኮ ደንበኞችን እና አገልግሎት አቅራቢዎችን የሚያገናኝ የታመነ ድልድይ መገንባት ነው።",
+    "valuesTitle": "የእኛ እሴቶች",
+    "values": {
+      "trust": "ታምነት እና ግልጽነት",
+      "care": "የግል የደንበኛ እንክብካቤ",
+      "service": "ዘመናዊ እና ጥራት ያለው አገልግሎት",
+      "expertise": "ሙያዊነት እና ብቃት"
+    }
+  },
+  "contact": {
+    "title": "ያግኙን",
+    "subtitle": "ለመርዳት ዝግጁ ነን። እባክዎን ከታች ያሉትን ቁጥሮች እና አድራሻዎች በመንካት ያግኙን።",
+    "phone": "ዋና ቢሮችን",
+    "whatsapp": "የWhatsApp ቁጥር",
+    "email": "ኢሜይል ይላኩልን",
+    "website": "ድር ጣቢያችንን ይጎብኙ"
+  }
+}
+

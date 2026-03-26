@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "eBalami",
+    "slug": "eBalamiMobile",
+    "version": "1.2.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "ebalami",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#121212"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ebalami.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#121212"
+      },
+      "package": "com.ebalami.app",
+      "versionCode": 4
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8a988426-2246-4472-8bde-18bd8f6efdfd"
+      },
+      "firebaseApiKey": "AIzaSyAq0ZMHARQzJlQDQVdcBrJLSOwrvI1tCLI",
+      "firebaseAuthDomain": "ebalami-website.firebaseapp.com",
+      "firebaseProjectId": "ebalami-website",
+      "firebaseStorageBucket": "ebalami-website.firebasestorage.app",
+      "firebaseMessagingSenderId": "612434597781",
+      "firebaseAppId": "1:612434597781:web:cd46819a426fc8ee60c89c"
+    }
+  }
+}

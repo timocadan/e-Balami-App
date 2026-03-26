@@ -1,0 +1,215 @@
+{
+  "home": {
+    "title": "What type of service do you need?",
+    "medicalServices": "Medical Travel Services",
+    "technicalServices": "Technical Services"
+  },
+  "farsamo": {
+    "title": "Technical Services Section",
+    "subtitle": "Click on the service that suits you to start your request.",
+    "marquee": "Order any technician you need.",
+    "bookNow": "Book Now",
+    "services": {
+      "homeOfficeRepair": "Home & Office Equipment Repair",
+      "electrician": "Electrician",
+      "plumber": "Plumber",
+      "construction": "Construction Services",
+      "technology": "Technology Services",
+      "carRepair": "Car Repair",
+      "events": "Event Services",
+      "other": "Other Services"
+    },
+    "location": {
+      "title": "Where are you located?",
+      "placeholder": "Type the city...",
+      "alert": "Please select a valid city from the list.",
+      "alertTitle": "Attention",
+      "next": "Next",
+      "cities": {
+        "Jigjiga": "Jigjiga",
+        "Dire Dawa": "Dire Dawa",
+        "Mogadishu": "Mogadishu",
+        "Hargaysa": "Hargeisa",
+        "Garoowe": "Garowe",
+        "Bosaso": "Bosaso"
+      }
+    },
+    "form": {
+      "fullName": "Your Full Name",
+      "fullNamePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "example@gmail.com",
+      "phone": "Phone Number",
+      "address": "Location where the technician will come",
+      "addressPlaceholder": "Example: MP Houses in Garabcase area",
+      "next": "Next",
+      "errors": {
+        "nameRequired": "Please enter your name.",
+        "emailInvalid": "Please enter a valid email.",
+        "phoneInvalid": "Please enter a valid phone number with the country code you selected.",
+        "addressRequired": "Please enter your detailed address.",
+        "firebaseError": "An error occurred. Please try again.",
+        "errorTitle": "Cilad Firebase"
+      },
+      "errorTitle": "Error",
+      "phoneErrorTitle": "Phone Error"
+    },
+    "details": {
+      "title": "Describe Your Need",
+      "subtitle": "Briefly tell us the work that will be done for you",
+      "placeholder": "Example: The water tap that was broken is causing me problems...",
+      "charactersLeft": "characters remaining",
+      "next": "Next",
+      "errors": {
+        "lengthInvalid": "The description must be between 10 and 50 characters.",
+        "documentNotFound": "Request ID not found. Please start over.",
+        "updateError": "Could not update data. Please try again.",
+        "errorTitle": "Critical Error",
+        "firebaseError": "Cilad Firebase"
+      },
+      "alertTitle": "Attention"
+    },
+    "bixinta": {
+      "title": "Summary & Confirmation",
+      "customer": "CUSTOMER",
+      "service": "SELECTED SERVICE",
+      "details": "JOB DETAILS",
+      "confirmButton": "Confirm Request"
+    },
+    "success": {
+      "title": "Congratulations!",
+      "message": "Your request for {serviceName} has been confirmed. The technician will contact you.",
+      "backToHome": "Back to Home"
+    }
+  },
+  "caafimaad": {
+    "title": "Medical Travel Services Section",
+    "subtitle": "Please select the service you need.",
+    "marquee": "We are Your Medical Travel Companion",
+    "bookPackage": "Book Complete Package",
+    "services": {
+      "hotelBooking": "Hotel Booking",
+      "hospitalBooking": "Hospital Booking",
+      "translator": "Translator",
+      "airportTaxi": "Airport Taxi",
+      "flightTicket": "Flight Ticket",
+      "other": "Additional Services"
+    },
+    "additionalServices": {
+      "title": "Additional Services",
+      "visaHelp": "Visa Assistance",
+      "embassyBooking": "Embassy Appointment Booking",
+      "close": "Close"
+    },
+    "whatsappError": "Make sure you have WhatsApp on your phone.",
+    "whatsappErrorTitle": "Error",
+    "servicesSelection": {
+      "packageTitle": "Complete Package",
+      "packageSubtitle": "You can remove it if there is a service you don't need.",
+      "singleTitle": "Your Service",
+      "singleSubtitle": "Do you want to add more services?",
+      "next": "Next",
+      "errors": {
+        "noServiceSelected": "Please select at least one service.",
+        "firebaseError": "An error occurred. Please check your internet.",
+        "errorTitle": "Attention",
+        "firebaseErrorTitle": "Cilad Firebase",
+        "cannotRemove": "You cannot remove this original service.",
+        "cannotRemoveTitle": "Note"
+      }
+    },
+    "location": {
+      "title": "Where are you traveling to?",
+      "placeholder": "Type the city...",
+      "next": "Next",
+      "cities": {
+        "Jigjiga": "Jigjiga",
+        "Addis Ababa": "Addis Ababa",
+        "Dire Dawa": "Dire Dawa",
+        "Harer": "Harar",
+        "Hyderabad": "Hyderabad",
+        "Caira": "Cairo"
+      },
+      "countries": {
+        "Ethiopia": "Ethiopia",
+        "India": "India",
+        "Masar": "Egypt"
+      },
+      "errors": {
+        "noLocationSelected": "Please select a valid city from the list.",
+        "noRequestId": "Request ID not found.",
+        "updateError": "Could not update data.",
+        "errorTitle": "Attention",
+        "errorTitleCritical": "Critical Error",
+        "firebaseError": "Cilad Firebase"
+      }
+    },
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "example@gmail.com",
+      "age": "Age",
+      "agePlaceholder": "Example: Jigjiga",
+      "city": "City You Currently Reside In",
+      "phone": "Phone Number",
+      "address": "Location",
+      "addressPlaceholder": "Example: Ambassador Hotel",
+      "next": "Next",
+      "errors": {
+        "nameRequired": "Please enter a valid name.",
+        "emailInvalid": "Please enter a valid email.",
+        "phoneInvalid": "Please enter a valid phone number.",
+        "requestIdNotFound": "Request ID not found.",
+        "firebaseError": "An error occurred. Please try again.",
+        "errorTitle": "Error",
+        "errorTitleCritical": "Critical Error",
+        "firebaseErrorTitle": "Cilad Firebase"
+      }
+    },
+    "bixinta": {
+      "title": "Summary & Confirmation",
+      "customer": "CUSTOMER",
+      "services": "SELECTED SERVICES",
+      "confirmButton": "Confirm Request"
+    },
+    "success": {
+      "title": "Congratulations!",
+      "message": "Your request has been confirmed. e-Balami staff will contact you soon.",
+      "backToHome": "Back to Home"
+    }
+  },
+  "common": {
+    "next": "Next",
+    "back": "Back",
+    "close": "Close",
+    "loading": "Loading..."
+  },
+  "tabs": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "What is e-Balami?",
+    "description": "e-Balami is a trusted Somali brand, established to combat fraud and provide reliable, accessible services. The name \"e-Balami\" means \"Book for me.\"",
+    "missionTitle": "Our Mission",
+    "missionDescription": "Our mission is to build a bridge of trust that connects customers and service providers.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "trust": "Trust and Transparency",
+      "care": "Personalized Customer Care",
+      "service": "Modern and Quality Service",
+      "expertise": "Expertise and Efficiency"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are ready to help you. Please contact us by tapping the numbers and addresses below.",
+    "phone": "Our Main Office",
+    "whatsapp": "WhatsApp Number",
+    "email": "Send Us Email",
+    "website": "Visit Our Website"
+  }
+}
+
