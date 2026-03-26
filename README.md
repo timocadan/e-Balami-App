@@ -1,50 +1,132 @@
-# Welcome to your Expo app 👋
+# eBalami App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+eBalami is a multilingual mobile application built with React Native and Expo for requesting medical and technical services. It supports Somali (default), English, and Amharic, and includes order creation, validation, and Firebase Firestore integration.
 
-## Get started
+## Key Features
 
-1. Install dependencies
+- Dual service flows: Medical (`Caafimaad`) and Technical (`Farsamo`)
+- Multilingual UI (Somali, English, Amharic)
+- Draft-to-confirmed order lifecycle in Firestore
+- Form validation and input security helpers
+- Admin dashboard-compatible confirmed orders
+- Consistent dark theme and structured navigation
 
+## Technology Stack
+
+- React Native `0.81.5`
+- React `19.1.0`
+- Expo SDK `54.0.21`
+- TypeScript `~5.9.2`
+- Expo Router `~6.0.14`
+- Firebase `^12.4.0` (Firestore)
+
+## Project Structure
+
+```text
+app/                Expo Router screens and flows
+components/         Reusable UI components
+contexts/           Global context providers (language)
+translations/       i18n JSON files (so/en/am)
+utils/              Validation and security utilities
+assets/images/      App images and icons
+firebaseConfig.js   Firebase initialization
+firestore.rules     Firestore security rules
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js `18+`
+- npm `9+`
+- Expo CLI (`npm install -g expo-cli`)
+- Firebase CLI (`npm install -g firebase-tools`)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/timocadan/e-Balami-App.git
+   cd "eBalami App"
+   ```
+2. Install dependencies:
    ```bash
    npm install
    ```
-
-2. Start the app
-
+3. Create `.env` in the project root:
+   ```env
+   EXPO_PUBLIC_FIREBASE_API_KEY=your_api_key
+   EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   EXPO_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+   EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   EXPO_PUBLIC_FIREBASE_APP_ID=your_app_id
+   ```
+4. Start development server:
    ```bash
-   npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Run on Platforms
 
 ```bash
+npm run android
+npm run ios
+npm run web
+```
+
+## Available Scripts
+
+```bash
+npm start
+npm run android
+npm run ios
+npm run web
+npm run lint
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Architecture Overview
 
-## Learn more
+### Medical Flow (`Caafimaad`)
 
-To learn more about developing your project with Expo, look at the following resources:
+`Home -> Caafimaad -> Service Selection -> Form -> Location -> Summary -> Success`
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Technical Flow (`Farsamo`)
 
-## Join the community
+`Home -> Farsamo -> Service Selection -> Location -> Form -> Details -> Summary -> Success`
 
-Join our community of developers creating universal apps.
+### Data Lifecycle
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. User submits details to draft collections.
+2. User confirms order on summary screen.
+3. Order is moved to confirmed collections.
+4. Admin dashboard consumes confirmed data.
+
+## Firestore Collections
+
+- Draft medical: `dalabyadaAanDhamaystirnayn`
+- Draft technical: `dalabyadaFarsamoQabyoAh`
+- Confirmed medical: `dalabyadaDhamaystiran`
+- Confirmed technical: `dalabyadaFarsamada`
+
+## Deployment Notes
+
+- Build with EAS:
+  ```bash
+  eas build --platform android
+  eas build --platform ios
+  ```
+- Deploy Firestore rules:
+  ```bash
+  firebase deploy --only firestore:rules
+  ```
+
+## Documentation
+
+- Technical documentation: `TECHNICAL_DOCUMENTATION.md`
+- Security notes: `SECURITY_IMPLEMENTATION.md`
+
+## Support
+
+For project questions and support: `ebalamiservices@gmail.com`
