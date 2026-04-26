@@ -1,86 +1,55 @@
 {
   "home": {
-    "title": "What type of service do you need?",
-    "medicalServices": "Medical Travel Services",
-    "technicalServices": "Technical Services"
+    "welcomeTitle": "Your Trusted Medical Travel Companion",
+    "startBooking": "Start Your Booking"
   },
-  "farsamo": {
-    "title": "Technical Services Section",
-    "subtitle": "Click on the service that suits you to start your request.",
-    "marquee": "Order any technician you need.",
-    "bookNow": "Book Now",
-    "services": {
-      "homeOfficeRepair": "Home & Office Equipment Repair",
-      "electrician": "Electrician",
-      "plumber": "Plumber",
-      "construction": "Construction Services",
-      "technology": "Technology Services",
-      "carRepair": "Car Repair",
-      "events": "Event Services",
-      "other": "Other Services"
-    },
-    "location": {
-      "title": "Where are you located?",
-      "placeholder": "Type the city...",
-      "alert": "Please select a valid city from the list.",
-      "alertTitle": "Attention",
-      "next": "Next",
-      "cities": {
-        "Jigjiga": "Jigjiga",
-        "Dire Dawa": "Dire Dawa",
-        "Mogadishu": "Mogadishu",
-        "Hargaysa": "Hargeisa",
-        "Garoowe": "Garowe",
-        "Bosaso": "Bosaso"
-      }
-    },
-    "form": {
-      "fullName": "Your Full Name",
-      "fullNamePlaceholder": "Enter your name",
-      "email": "Email",
-      "emailPlaceholder": "example@gmail.com",
-      "phone": "Phone Number",
-      "address": "Location where the technician will come",
-      "addressPlaceholder": "Example: MP Houses in Garabcase area",
-      "next": "Next",
-      "errors": {
-        "nameRequired": "Please enter your name.",
-        "emailInvalid": "Please enter a valid email.",
-        "phoneInvalid": "Please enter a valid phone number with the country code you selected.",
-        "addressRequired": "Please enter your detailed address.",
-        "firebaseError": "An error occurred. Please try again.",
-        "errorTitle": "Cilad Firebase"
-      },
-      "errorTitle": "Error",
-      "phoneErrorTitle": "Phone Error"
-    },
-    "details": {
-      "title": "Describe Your Need",
-      "subtitle": "Briefly tell us the work that will be done for you",
-      "placeholder": "Example: The water tap that was broken is causing me problems...",
-      "charactersLeft": "characters remaining",
-      "next": "Next",
-      "errors": {
-        "lengthInvalid": "The description must be between 10 and 50 characters.",
-        "documentNotFound": "Request ID not found. Please start over.",
-        "updateError": "Could not update data. Please try again.",
-        "errorTitle": "Critical Error",
-        "firebaseError": "Cilad Firebase"
-      },
-      "alertTitle": "Attention"
-    },
-    "bixinta": {
-      "title": "Summary & Confirmation",
-      "customer": "CUSTOMER",
-      "service": "SELECTED SERVICE",
-      "details": "JOB DETAILS",
-      "confirmButton": "Confirm Request"
-    },
-    "success": {
-      "title": "Congratulations!",
-      "message": "Your request for {serviceName} has been confirmed. The technician will contact you.",
-      "backToHome": "Back to Home"
-    }
+  "login": {
+    "welcomeTitle": "Create an account or log in to continue your medical travel journey",
+    "fullNamePlaceholder": "Full Name",
+    "emailPlaceholder": "Email Address",
+    "passwordPlaceholder": "Password",
+    "signUpButton": "Sign Up",
+    "logInButton": "Log In",
+    "guestButton": "Continue as Guest",
+    "haveAccount": "Already have an account? Log In",
+    "noAccount": "Need an account? Sign Up",
+    "errorTitle": "Attention",
+    "fullNameRequired": "Please enter your full name.",
+    "emailRequired": "Please enter your email address.",
+    "passwordRequired": "Please enter your password.",
+    "passwordTooShort": "Password must be at least 6 characters.",
+    "invalidEmail": "Please enter a valid email address.",
+    "invalidCredentials": "Your email or password is incorrect.",
+    "emailAlreadyInUse": "This email is already in use.",
+    "weakPassword": "Please use a stronger password.",
+    "networkError": "Network error. Please check your connection and try again.",
+    "guestLoginErrorTitle": "Guest Login Error",
+    "guestLoginErrorMessage": "Unable to continue as guest right now.",
+    "signupFailed": "Unable to create your account right now.",
+    "loginFailed": "Unable to log in right now."
+  },
+  "profile": {
+    "title": "My Profile",
+    "guestUser": "Guest User",
+    "fullName": "Full Name",
+    "email": "Email",
+    "signOut": "Sign Out",
+    "createPermanentAccount": "Create a Permanent Account",
+    "bookingRequests": "My Booking Requests",
+    "bookingDate": "Booking Date",
+    "mainDestination": "Main Destination",
+    "selectedServices": "Selected Services",
+    "country": "Country",
+    "bookingDetails": "Booking Details",
+    "deleteBooking": "Delete Booking",
+    "confirmDelete": "Confirm Delete",
+    "deleteBookingPrompt": "Are you sure you want to delete this booking?",
+    "deleteFailedTitle": "Delete Failed",
+    "deleteFailedMessage": "Unable to delete this booking right now.",
+    "noServices": "No services listed",
+    "loadingBookings": "Loading your booking requests...",
+    "noBookings": "You haven't made any bookings yet. Start your journey from the Home screen.",
+    "guestPrompt": "Guest accounts may not keep booking history forever. Create a permanent account when you're ready."
   },
   "caafimaad": {
     "title": "Medical Travel Services Section",
@@ -101,6 +70,12 @@
       "embassyBooking": "Embassy Appointment Booking",
       "close": "Close"
     },
+    "whatsapp": {
+      "visaMessage": "Hello e-Balami, I need help with a medical visa assistance.",
+      "embassyMessage": "Hello e-Balami, I need help with an embassy appointment.",
+      "flightMessage": "Hello e-Balami, I want to book a flight ticket.",
+      "generalMessage": "Hello e-Balami, I am contacting you from the app."
+    },
     "whatsappError": "Make sure you have WhatsApp on your phone.",
     "whatsappErrorTitle": "Error",
     "servicesSelection": {
@@ -120,23 +95,31 @@
     },
     "location": {
       "title": "Where are you traveling to?",
-      "placeholder": "Type the city...",
+      "placeholder": "Search city or country...",
       "next": "Next",
       "cities": {
-        "Jigjiga": "Jigjiga",
-        "Addis Ababa": "Addis Ababa",
-        "Dire Dawa": "Dire Dawa",
-        "Harer": "Harar",
-        "Hyderabad": "Hyderabad",
-        "Caira": "Cairo"
+        "addisAbaba": "Addis Ababa",
+        "jigjiga": "Jigjiga",
+        "direDawa": "Dire Dawa",
+        "harer": "Harar",
+        "hyderabad": "Hyderabad",
+        "newDelhi": "New Delhi",
+        "mumbai": "Mumbai",
+        "cairo": "Cairo",
+        "alexandria": "Alexandria",
+        "dubaiUae": "Dubai (UAE)",
+        "istanbulTurkey": "Istanbul (Turkey)"
       },
       "countries": {
-        "Ethiopia": "Ethiopia",
-        "India": "India",
-        "Masar": "Egypt"
+        "ethiopia": "Ethiopia",
+        "india": "India",
+        "egypt": "Egypt",
+        "otherDestinations": "Other Destinations"
       },
       "errors": {
         "noLocationSelected": "Please select a valid city from the list.",
+        "noSearchResults": "No cities match your search.",
+        "destinationTooLong": "Destination text is too long.",
         "noRequestId": "Request ID not found.",
         "updateError": "Could not update data.",
         "errorTitle": "Attention",
@@ -150,7 +133,7 @@
       "email": "Email",
       "emailPlaceholder": "example@gmail.com",
       "age": "Age",
-      "agePlaceholder": "Example: Jigjiga",
+      "cityPlaceholder": "Example: Jigjiga",
       "city": "City You Currently Reside In",
       "phone": "Phone Number",
       "address": "Location",
@@ -170,7 +153,13 @@
     "bixinta": {
       "title": "Summary & Confirmation",
       "customer": "CUSTOMER",
+      "destination": "DESTINATION",
+      "country": "Country",
+      "city": "City",
       "services": "SELECTED SERVICES",
+      "flightTicket": "FLIGHT TICKET",
+      "yes": "Yes",
+      "no": "No",
       "confirmButton": "Confirm Request"
     },
     "success": {
@@ -185,6 +174,12 @@
     "close": "Close",
     "loading": "Loading..."
   },
+  "drawer": {
+    "menu": "Menu",
+    "language": "Language",
+    "languageHint": "Tap to switch",
+    "logout": "Logout"
+  },
   "tabs": {
     "home": "Home",
     "about": "About Us",
@@ -192,9 +187,9 @@
   },
   "about": {
     "title": "What is e-Balami?",
-    "description": "e-Balami is a trusted Somali brand, established to combat fraud and provide reliable, accessible services. The name \"e-Balami\" means \"Book for me.\"",
+    "description": "e-Balami is your trusted medical travel companion. We provide integrated healthcare logistics—from hospital bookings to flights and hotels—ensuring transparent service and protecting you from exploitation and fraud. The name \"e-Balami\" means \"Book for me.\"",
     "missionTitle": "Our Mission",
-    "missionDescription": "Our mission is to build a bridge of trust that connects customers and service providers.",
+    "missionDescription": "Our mission is to build the bridge of trust connecting our community with high-quality healthcare services, ensuring transparency, safety, and comprehensive support.",
     "valuesTitle": "Our Values",
     "values": {
       "trust": "Trust and Transparency",
@@ -212,4 +207,3 @@
     "website": "Visit Our Website"
   }
 }
-

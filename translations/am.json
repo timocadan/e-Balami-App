@@ -1,86 +1,55 @@
 {
   "home": {
-    "title": "ምን ዓይነት አገልግሎት ይፈልጋሉ?",
-    "medicalServices": "የጤና ጉዞ አገልግሎቶች",
-    "technicalServices": "የቴክኒካል አገልግሎቶች"
+    "welcomeTitle": "የእርስዎ ታማኝ የህክምና ጉዞ ጓደኛ",
+    "startBooking": "የእርስዎን ቦታ ይጀምሩ"
   },
-  "farsamo": {
-    "title": "የቴክኒካል አገልግሎቶች ክፍል",
-    "subtitle": "የእርስዎን ጥያቄ ለመጀመር የሚመለከትዎትን አገልግሎት ይጫኑ።",
-    "marquee": "የሚፈልጉትን ማንኛውንም ቴክኒሻን ይዘዙ።",
-    "bookNow": "አሁን ይዘዙ",
-    "services": {
-      "homeOfficeRepair": "የቤት እና ቢሮ መሳሪያዎች ጥገና",
-      "electrician": "ኤሌክትሪሻን",
-      "plumber": "የውሃ ባለሙያ",
-      "construction": "የግንባታ አገልግሎቶች",
-      "technology": "የቴክኖሎጂ አገልግሎቶች",
-      "carRepair": "የመኪና ጥገና",
-      "events": "የዝግጅት አገልግሎቶች",
-      "other": "ሌሎች አገልግሎቶች"
-    },
-    "location": {
-      "title": "የት ነው የሚገኙት?",
-      "placeholder": "ከተማውን ይተይቡ...",
-      "alert": "እባክዎን ከዝርዝሩ ትክክለኛ ከተማ ይምረጡ።",
-      "alertTitle": "ትኩረት",
-      "next": "ቀጣይ",
-      "cities": {
-        "Jigjiga": "ጅጅጋ",
-        "Dire Dawa": "ድሬ ዳዋ",
-        "Mogadishu": "ሞቃዲሾ",
-        "Hargaysa": "ሐርጌይሳ",
-        "Garoowe": "ጋሮዌ",
-        "Bosaso": "ቦሳሶ"
-      }
-    },
-    "form": {
-      "fullName": "ሙሉ ስምዎ",
-      "fullNamePlaceholder": "ስምዎን ያስገቡ",
-      "email": "ኢሜይል",
-      "emailPlaceholder": "ምሳሌ@gmail.com",
-      "phone": "የስልክ ቁጥር",
-      "address": "ቴክኒሻኑ የሚመጣበት ቦታ",
-      "addressPlaceholder": "ምሳሌ: በጋራብካሴ አካባቢ የMP ቤቶች",
-      "next": "ቀጣይ",
-      "errors": {
-        "nameRequired": "እባክዎን ስምዎን ያስገቡ።",
-        "emailInvalid": "እባክዎን ትክክለኛ ኢሜይል ያስገቡ።",
-        "phoneInvalid": "እባክዎን የመረጡትን የአገር ኮድ ያካተተ ትክክለኛ የስልክ ቁጥር ያስገቡ።",
-        "addressRequired": "እባክዎን ዝርዝር አድራሻዎን ያስገቡ።",
-        "firebaseError": "ስህተት ተፈጥሯል። እባክዎን እንደገና ይሞክሩ።",
-        "errorTitle": "Cilad Firebase"
-      },
-      "errorTitle": "ስህተት",
-      "phoneErrorTitle": "የስልክ ስህተት"
-    },
-    "details": {
-      "title": "ፍላጎትዎን ይግለጹ",
-      "subtitle": "ለእርስዎ የሚከናወን ስራ በአጭር ይንገሩን",
-      "placeholder": "ምሳሌ: የተሰበረው የውሃ ቧንቧ ችግር ይፈጥርልኛል...",
-      "charactersLeft": "ገላጮች ይቀራሉ",
-      "next": "ቀጣይ",
-      "errors": {
-        "lengthInvalid": "መግለጫው በ10 እና 50 ገላጮች መካከል መሆን አለበት።",
-        "documentNotFound": "የጥያቄ መለያ አልተገኘም። እባክዎን እንደገና ይጀምሩ።",
-        "updateError": "ውሂቡን ማዘመን አልተቻለም። እባክዎን እንደገና ይሞክሩ።",
-        "errorTitle": "አስቸኳይ ስህተት",
-        "firebaseError": "Cilad Firebase"
-      },
-      "alertTitle": "ትኩረት"
-    },
-    "bixinta": {
-      "title": "ማጠቃለያ እና ማረጋገጫ",
-      "customer": "ደንበኛ",
-      "service": "የተመረጠ አገልግሎት",
-      "details": "የስራ ዝርዝሮች",
-      "confirmButton": "ጥያቄውን ያረጋግጡ"
-    },
-    "success": {
-      "title": "እንኳን ደስ አለዎት!",
-      "message": "የ{serviceName} ጥያቄዎ ተረጋግጧል። ቴክኒሻኑ ያገናኝዎታል።",
-      "backToHome": "ወደ መነሻ ተመለስ"
-    }
+  "login": {
+    "welcomeTitle": "የህክምና ጉዞዎን ለመቀጠል መለያ ይፍጠሩ ወይም ይግቡ።",
+    "fullNamePlaceholder": "ሙሉ ስም",
+    "emailPlaceholder": "የኢሜይል አድራሻ",
+    "passwordPlaceholder": "የይለፍ ቃል",
+    "signUpButton": "ይመዝገቡ",
+    "logInButton": "ይግቡ",
+    "guestButton": "እንደ እንግዳ ይቀጥሉ",
+    "haveAccount": "መለያ አለዎት? ይግቡ",
+    "noAccount": "መለያ ይፈልጋሉ? ይመዝገቡ",
+    "errorTitle": "ትኩረት",
+    "fullNameRequired": "እባክዎ ሙሉ ስምዎን ያስገቡ።",
+    "emailRequired": "እባክዎ ኢሜይልዎን ያስገቡ።",
+    "passwordRequired": "እባክዎ የይለፍ ቃልዎን ያስገቡ።",
+    "passwordTooShort": "የይለፍ ቃሉ ቢያንስ 6 ፊደላት ሊኖሩት ይገባል።",
+    "invalidEmail": "እባክዎ ትክክለኛ ኢሜይል ያስገቡ።",
+    "invalidCredentials": "ኢሜይሉ ወይም የይለፍ ቃሉ ትክክል አይደለም።",
+    "emailAlreadyInUse": "ይህ ኢሜይል አስቀድሞ ጥቅም ላይ ውሏል።",
+    "weakPassword": "እባክዎ የበለጠ ጠንካራ የይለፍ ቃል ይጠቀሙ።",
+    "networkError": "የኔትወርክ ስህተት አለ። እባክዎ ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።",
+    "guestLoginErrorTitle": "የእንግዳ መግቢያ ስህተት",
+    "guestLoginErrorMessage": "አሁን እንደ እንግዳ መቀጠል አልተቻለም።",
+    "signupFailed": "መለያዎን አሁን መፍጠር አልተቻለም።",
+    "loginFailed": "አሁን መግባት አልተቻለም።"
+  },
+  "profile": {
+    "title": "የእኔ ፕሮፋይል",
+    "guestUser": "የእንግዳ ተጠቃሚ",
+    "fullName": "ሙሉ ስም",
+    "email": "ኢሜይል",
+    "signOut": "ውጣ",
+    "createPermanentAccount": "ቋሚ መለያ ይፍጠሩ",
+    "bookingRequests": "የእኔ የቦታ ጥያቄዎች",
+    "bookingDate": "የቦታ ቀን",
+    "mainDestination": "ዋና መዳረሻ",
+    "selectedServices": "የተመረጡ አገልግሎቶች",
+    "country": "ሀገር",
+    "bookingDetails": "የቦታ ዝርዝሮች",
+    "deleteBooking": "ቦታን ሰርዝ",
+    "confirmDelete": "ስረዛን አረጋግጥ",
+    "deleteBookingPrompt": "ይህን ቦታ ለመሰረዝ እርግጠኛ ነዎት?",
+    "deleteFailedTitle": "መሰረዝ አልተሳካም",
+    "deleteFailedMessage": "ይህን ቦታ አሁን መሰረዝ አልተቻለም።",
+    "noServices": "ምንም አገልግሎቶች አልተዘረዘሩም",
+    "loadingBookings": "የቦታ ጥያቄዎችዎን በመጫን ላይ...",
+    "noBookings": "እስካሁን ምንም ቦታ አላደረጉም። ጉዞዎን ከHome ስክሪን ይጀምሩ።",
+    "guestPrompt": "የእንግዳ መለያዎች የቦታ ታሪክን ሁልጊዜ ላይይዙ ይችላሉ። ዝግጁ ሲሆኑ ቋሚ መለያ ይፍጠሩ።"
   },
   "caafimaad": {
     "title": "የጤና ጉዞ አገልግሎቶች ክፍል",
@@ -101,6 +70,12 @@
       "embassyBooking": "የምክትል ቤት ምዝግብ",
       "close": "ዝጋ"
     },
+    "whatsapp": {
+      "visaMessage": "ሰላም e-Balami፣ ለህክምና ቪዛ እርዳታ እፈልጋለሁ።",
+      "embassyMessage": "ሰላም e-Balami፣ በምክትል ቤት ቀጠሮ ላይ እርዳታ እፈልጋለሁ።",
+      "flightMessage": "ሰላም e-Balami፣ የአውሮፕላን ትኬት ማስያዝ እፈልጋለሁ።",
+      "generalMessage": "ሰላም e-Balami፣ ከመተግበሪያው እየተገናኘሁ ነው።"
+    },
     "whatsappError": "በስልክዎ ላይ WhatsApp እንዳለዎት ያረጋግጡ።",
     "whatsappErrorTitle": "ስህተት",
     "servicesSelection": {
@@ -120,23 +95,31 @@
     },
     "location": {
       "title": "ወዴት ነው የሚሄዱት?",
-      "placeholder": "ከተማውን ይተይቡ...",
+      "placeholder": "ከተማ ወይም ሀገር ይፈልጉ...",
       "next": "ቀጣይ",
       "cities": {
-        "Jigjiga": "ጅጅጋ",
-        "Addis Ababa": "አዲስ አበባ",
-        "Dire Dawa": "ድሬ ዳዋ",
-        "Harer": "ሐረር",
-        "Hyderabad": "ሃይድራባድ",
-        "Caira": "ካይሮ"
+        "addisAbaba": "አዲስ አበባ",
+        "jigjiga": "ጅጅጋ",
+        "direDawa": "ድሬ ዳዋ",
+        "harer": "ሐረር",
+        "hyderabad": "ሃይድራባድ",
+        "newDelhi": "ኒው ዴሊ",
+        "mumbai": "ሞምባይ",
+        "cairo": "ካይሮ",
+        "alexandria": "እስክንድርያ",
+        "dubaiUae": "ዱባይ (ኢህአዴ)",
+        "istanbulTurkey": "ኢስታንቡል (ቱርክ)"
       },
       "countries": {
-        "Ethiopia": "ኢትዮጵያ",
-        "India": "ህንድ",
-        "Masar": "ግብጽ"
+        "ethiopia": "ኢትዮጵያ",
+        "india": "ህንድ",
+        "egypt": "ግብጽ",
+        "otherDestinations": "ሌሎች መዳረሻዎች"
       },
       "errors": {
         "noLocationSelected": "እባክዎን ከዝርዝሩ ትክክለኛ ከተማ ይምረጡ።",
+        "noSearchResults": "ከፍለጋዎ ጋር የሚዛመድ ከተማ የለም።",
+        "destinationTooLong": "የመዳረሻ ጽሑፉ በጣም ረጅም ነው።",
         "noRequestId": "የጥያቄ መለያ አልተገኘም።",
         "updateError": "ውሂቡን ማዘመን አልተቻለም።",
         "errorTitle": "ትኩረት",
@@ -150,7 +133,7 @@
       "email": "ኢሜይል",
       "emailPlaceholder": "ምሳሌ@gmail.com",
       "age": "ዕድሜ",
-      "agePlaceholder": "ምሳሌ: ጅጅጋ",
+      "cityPlaceholder": "ምሳሌ: ጅጅጋ",
       "city": "አሁን የሚኖሩበት ከተማ",
       "phone": "የስልክ ቁጥር",
       "address": "ቦታ",
@@ -170,7 +153,13 @@
     "bixinta": {
       "title": "ማጠቃለያ እና ማረጋገጫ",
       "customer": "ደንበኛ",
+      "destination": "መዳረሻ",
+      "country": "ሀገር",
+      "city": "ከተማ",
       "services": "የተመረጡ አገልግሎቶች",
+      "flightTicket": "የአውሮፕላን ትኬት",
+      "yes": "አዎ",
+      "no": "አይ",
       "confirmButton": "ጥያቄውን ያረጋግጡ"
     },
     "success": {
@@ -185,6 +174,12 @@
     "close": "ዝጋ",
     "loading": "በመጫን ላይ..."
   },
+  "drawer": {
+    "menu": "ምናሌ",
+    "language": "ቋንቋ",
+    "languageHint": "ለመቀየር ይንኩ",
+    "logout": "ውጣ"
+  },
   "tabs": {
     "home": "መነሻ",
     "about": "ስለእኛ",
@@ -192,9 +187,9 @@
   },
   "about": {
     "title": "e-Balami ምንድን ነው?",
-    "description": "e-Balami የታመነ የሶማሊያ ምርት ስም ነው፣ ለማጭበርበር ለመጋፈጥ እና አስተማማኝ፣ ተደራሽ አገልግሎቶችን ለመስጠት የተመሰረተ ነው። \"e-Balami\" የሚለው ስም \"ለእኔ ይዘዙ\" ማለት ነው።",
+    "description": "e-Balami የታመነ የህክምና ጉዞ አጋርዎ ነው። ከሆስፒታል እስከ ሆቴል እና የበረራ ትኬት ዝግጅቶችን በታማኝነት እና በግልጽነት በማቅረብ፣ ደንበኞቻችንን ካልተገባ ብዝበዛ እንከላከላለን። \"e-Balami\" የሚለው ስም \"ለእኔ ይዘዙ\" ማለት ነው።",
     "missionTitle": "የእኛ ተልዕኮ",
-    "missionDescription": "የእኛ ተልዕኮ ደንበኞችን እና አገልግሎት አቅራቢዎችን የሚያገናኝ የታመነ ድልድይ መገንባት ነው።",
+    "missionDescription": "ተልእኳችን ማህበረሰባችንን ጥራት ካለው የህክምና አገልግሎት ጋር የሚያገናኝ የታማኝነት ድልድይ መገንባት ሲሆን ይህም ግልጽነትን፣ ደህንነትን እና የተሟላ እንክብካቤን ማረጋገጥ ነው።",
     "valuesTitle": "የእኛ እሴቶች",
     "values": {
       "trust": "ታምነት እና ግልጽነት",
@@ -212,4 +207,3 @@
     "website": "ድር ጣቢያችንን ይጎብኙ"
   }
 }
-
