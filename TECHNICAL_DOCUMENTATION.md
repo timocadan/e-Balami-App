@@ -25,10 +25,10 @@
 
 ## Project Overview
 
-**eBalami** is a multilingual mobile application built with React Native and Expo that facilitates service requests for medical and technical services. The app supports three languages (Somali, English, and Amharic) and provides a seamless flow for users to request services, submit their information, and track their orders.
+**eBalami** is a multilingual mobile application built with React Native and Expo focused on **medical travel** service requests. The app supports three languages (Somali, English, and Amharic) and provides a seamless flow for users to request services, submit their information, and track their orders.
 
 ### Key Features
-- **Dual Service Types**: Medical Services (Caafimaad) and Technical Services (Farsamo)
+- **Medical travel (Caafimaad)**: service selection, booking flow, and order lifecycle
 - **Multilingual Support**: Somali (default), English, and Amharic
 - **Order Management**: Draft orders that convert to confirmed orders upon completion
 - **Admin Dashboard Integration**: Web-based admin panel for order management
@@ -64,26 +64,19 @@
 ```
 ebalami-app/
 ├── app/                          # Expo Router pages (file-based routing)
-│   ├── _layout.tsx              # Root layout with providers
+│   ├── _layout.tsx              # Root layout (GestureHandlerRootView, Stack)
 │   ├── index.tsx                # Entry point (redirects to /home)
-│   └── (tabs)/                  # Tab navigation group
-│       ├── _layout.tsx          # Tab layout configuration
-│       ├── home/                # Home tab screens
-│       │   ├── index.tsx        # Main home screen
-│       │   ├── caafimaad/       # Medical services flow
+│   └── (drawer)/                # Drawer navigation group
+│       ├── _layout.tsx          # Drawer + app header
+│       ├── home/                # Welcome + medical stack
+│       │   ├── index.tsx        # Welcome / hero landing
+│       │   ├── caafimaad/       # Medical travel flow
 │       │   │   ├── index.tsx    # Service selection
 │       │   │   ├── adeegyada.tsx # Services selection (package/single)
 │       │   │   ├── form.tsx     # Customer information form
 │       │   │   ├── goobta.tsx   # Destination selection
 │       │   │   ├── bixinta.tsx  # Order summary
 │       │   │   └── guusha.tsx   # Success screen
-│       │   └── farsamo/         # Technical services flow
-│       │       ├── index.tsx    # Service selection
-│       │       ├── location.tsx # Location selection
-│       │       ├── form.tsx     # Customer information form
-│       │       ├── faahfaahin.tsx # Additional details
-│       │       ├── bixinta.tsx  # Order summary
-│       │       └── guusha.tsx   # Success screen
 │       ├── about.tsx            # About Us page
 │       └── contact.tsx          # Contact page
 │
@@ -227,13 +220,6 @@ Home → Caafimaad → Service Selection →
   Location Selection → Summary → Success
 ```
 
-#### Technical Services Flow (Farsamo)
-```
-Home → Farsamo → Service Selection → 
-  Location Selection → Customer Form → 
-  Additional Details → Summary → Success
-```
-
 ### State Management
 - **Global State**: React Context API (`LanguageContext`)
 - **Local State**: React hooks (`useState`, `useEffect`)
@@ -259,19 +245,9 @@ Home → Farsamo → Service Selection →
 - Flight Ticket (WhatsApp redirect)
 - Other Services (custom modal)
 
-**Technical Services (Farsamo)**
-- Home/Office Repair
-- Electrician
-- Plumber
-- Construction
-- Technology Services
-- Car Repair
-- Events
-- Other Services
-
 ### 2. Order Lifecycle
 
-1. **Draft Stage** (`dalabyadaAanDhamaystirnayn` / `dalabyadaFarsamoQabyoAh`)
+1. **Draft Stage** (`dalabyadaAanDhamaystirnayn`)
    - User creates order with basic info
    - Order can be updated/modified
    - User completes all required fields
@@ -281,7 +257,7 @@ Home → Farsamo → Service Selection →
    - Draft is copied to confirmed collection
    - Draft is deleted from temporary collection
 
-3. **Confirmed Order** (`dalabyadaDhamaystiran` / `dalabyadaFarsamada`)
+3. **Confirmed Order** (`dalabyadaDhamaystiran`)
    - Immutable record
    - Visible to admin dashboard
    - Only admins can delete
@@ -313,28 +289,11 @@ dalabyadaAanDhamaystirnayn/    # Medical services drafts
   │   ├─ age?: number
   │   ├─ city?: string
   │   └─ destination?: string
-
-dalabyadaFarsamoQabyoAh/       # Technical services drafts
-  ├─ {docId}
-  │   ├─ service: string
-  │   ├─ location: string
-  │   ├─ name: string
-  │   ├─ email?: string          # Currently not collected (field hidden)
-  │   ├─ phone: string
-  │   ├─ address: string
-  │   ├─ timestamp: Timestamp
-  │   └─ details?: string
 ```
 
 #### Confirmed Collections
 ```
 dalabyadaDhamaystiran/         # Medical services confirmed
-  ├─ {docId}
-  │   ├─ (all fields from draft)
-  │   ├─ status: "xaqiijiyay"
-  │   └─ timestamp_dhamaystiran: Timestamp
-
-dalabyadaFarsamada/            # Technical services confirmed
   ├─ {docId}
   │   ├─ (all fields from draft)
   │   ├─ status: "xaqiijiyay"
@@ -363,9 +322,8 @@ All translations are stored in JSON files under `/translations/`:
 ```json
 {
   "home": {
-    "title": "Welcome Text",
-    "medicalServices": "Medical Services Button",
-    "technicalServices": "Technical Services Button"
+    "welcomeTitle": "Your Trusted Medical Travel Companion",
+    "startBooking": "Start Your Booking"
   },
   "caafimaad": {
     "services": {
@@ -469,11 +427,10 @@ The app uses **file-based routing** with Expo Router.
 **Route Structure**:
 ```
 /                    → Redirects to /home
-/home                → Home screen
-/home/caafimaad      → Medical services
-/home/farsamo        → Technical services
-/(tabs)/about        → About page
-/(tabs)/contact      → Contact page
+/home                → Welcome / hero landing
+/home/caafimaad      → Medical travel flow
+/about               → About page
+/contact             → Contact page
 ```
 
 ### Navigation Patterns
@@ -496,12 +453,11 @@ router.back();
 router.replace('/home/caafimaad/guusha');
 ```
 
-### Tab Navigation
+### Drawer navigation
 
-Configured in `app/(tabs)/_layout.tsx`:
-- Home (🏠)
-- About Us (ℹ️)
-- Contact (📞)
+Configured in `app/(drawer)/_layout.tsx`:
+- Drawer menu: Home, About, Contact, language switcher
+- Global header (logo + hamburger) on drawer screens
 
 ---
 
@@ -618,17 +574,12 @@ backButton: {
 - Consistent positioning and z-index for proper layering
 - Rounded corners for modern aesthetic
 
-**Files with standardized back buttons**:
-- `app/(tabs)/home/farsamo/index.tsx`
-- `app/(tabs)/home/caafimaad/index.tsx`
-- `app/(tabs)/home/farsamo/location.tsx`
-- `app/(tabs)/home/caafimaad/adeegyada.tsx`
-- `app/(tabs)/home/farsamo/form.tsx`
-- `app/(tabs)/home/caafimaad/form.tsx`
-- `app/(tabs)/home/farsamo/faahfaahin.tsx`
-- `app/(tabs)/home/caafimaad/goobta.tsx`
-- `app/(tabs)/home/farsamo/bixinta.tsx`
-- `app/(tabs)/home/caafimaad/bixinta.tsx`
+**Files with standardized back buttons** (medical flow):
+- `app/(drawer)/home/caafimaad/index.tsx`
+- `app/(drawer)/home/caafimaad/adeegyada.tsx`
+- `app/(drawer)/home/caafimaad/form.tsx`
+- `app/(drawer)/home/caafimaad/goobta.tsx`
+- `app/(drawer)/home/caafimaad/bixinta.tsx`
 
 ---
 
@@ -639,8 +590,7 @@ backButton: {
 **Status**: Email input fields are currently hidden but code is preserved for future use.
 
 **Affected Forms**:
-- `app/(tabs)/home/farsamo/form.tsx`
-- `app/(tabs)/home/caafimaad/form.tsx`
+- `app/(drawer)/home/caafimaad/form.tsx`
 
 **Implementation Details**:
 - Email field UI is commented out in both forms
@@ -649,29 +599,15 @@ backButton: {
 - State variables remain in code but are not used
 
 **To Re-enable Email Field**:
-1. **In both form files**, uncomment the email input JSX block (marked with `/* EMAIL FIELD - HIDDEN */`)
-2. **In `handleNext` function**, uncomment the email validation block
-3. **In Firestore save/update**, uncomment the email field in the document
-
-**Example (farsamo/form.tsx)**:
-```typescript
-// Currently commented out:
-/*
-<Text style={styles.label}>{t('farsamo.form.email')}</Text>
-<TextInput 
-    style={[styles.input, isEmailFocused && styles.inputFocused]} 
-    placeholder={t('farsamo.form.emailPlaceholder')} 
-    // ... rest of props
-/>
-*/
-```
+1. In `app/(drawer)/home/caafimaad/form.tsx`, uncomment the email input JSX block (marked with `/* EMAIL FIELD - HIDDEN */`)
+2. In `handleNext`, uncomment the email validation block
+3. In Firestore `updateDoc`, uncomment the email field in the document
 
 ### Design Consistency Improvements (December 2024)
 
 **Changes Made**:
 1. **Back Button Standardization**
-   - Changed Farsamo first page from `Ionicons arrow-back` to `MaterialIcons arrow-back-ios`
-   - Standardized all back buttons to use `MaterialIcons arrow-back-ios`
+   - Standardized back buttons to use `MaterialIcons arrow-back-ios`
    - Applied consistent styling (background, position, z-index) across all pages
 
 2. **Position Standardization**
@@ -851,7 +787,7 @@ npx expo start --clear
 ### Adding New Features
 
 1. **New Service Type**:
-   - Add service to appropriate flow (`caafimaad` or `farsamo`)
+   - Add service to the medical travel flow (`caafimaad`) and translations
    - Add translations to all language files
    - Update service selection screens
    - Test complete flow

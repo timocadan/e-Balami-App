@@ -51,6 +51,10 @@
     "noBookings": "Weli wax ballan ah maadan samayn. Safarkaaga ka bilow bogga Home.",
     "guestPrompt": "Akoonnada martidu ma kaydiyaan taariikhda dalabyada ee fadlan sameyso akoon joogto ah."
   },
+  "notifications": {
+    "title": "Ogeysiis",
+    "empty": "Weli Ogeysiis Ma Jiro"
+  },
   "caafimaad": {
     "title": "Qaybta Adeegyada Safarka Caafimaad",
     "subtitle": "Fadlan dooro adeegga aad u baahan tahay.",

@@ -51,6 +51,10 @@
     "noBookings": "You haven't made any bookings yet. Start your journey from the Home screen.",
     "guestPrompt": "Guest accounts may not keep booking history forever. Create a permanent account when you're ready."
   },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "No Notifications Yet"
+  },
   "caafimaad": {
     "title": "Medical Travel Services Section",
     "subtitle": "Please select the service you need.",

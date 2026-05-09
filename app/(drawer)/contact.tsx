@@ -4,6 +4,8 @@ import { Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLanguage } from '../../contexts/LanguageContext';
 
+const BRAND_YELLOW = '#FFCC00';
+
 // HALKAN KU BEDDEL MACLUUMAADKAAGA SAXDA AH
 const CONTACT_INFO = {
     phone: "025 278 8887",
@@ -17,7 +19,7 @@ export default function ContactScreen() {
     const openLink = (url: string) => Linking.openURL(url);
 
     return (
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView style={styles.safeArea} edges={['bottom', 'left', 'right']}>
             <View style={styles.container}>
                 <Text style={styles.title}>{t('contact.title')}</Text>
                 <Text style={styles.subtitle}>
@@ -26,19 +28,19 @@ export default function ContactScreen() {
 
                 <View style={styles.card}>
                     <TouchableOpacity style={styles.row} onPress={() => openLink(`tel:${CONTACT_INFO.phone}`)}>
-                        <FontAwesome name="phone" size={24} color="#FFC107" style={styles.icon}/>
+                        <FontAwesome name="phone" size={24} color={BRAND_YELLOW} style={styles.icon}/>
                         <Text style={styles.text}>{t('contact.phone')}</Text>
                     </TouchableOpacity>
                    <TouchableOpacity style={styles.row} onPress={() => openLink(CONTACT_INFO.whatsapp)}>
-                        <FontAwesome name="whatsapp" size={24} color="#FFC107" style={styles.icon}/>
+                        <FontAwesome name="whatsapp" size={24} color={BRAND_YELLOW} style={styles.icon}/>
                         <Text style={styles.text}>{t('contact.whatsapp')}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.row} onPress={() => openLink(`mailto:${CONTACT_INFO.email}`)}>
-                        <FontAwesome name="envelope" size={24} color="#FFC107" style={styles.icon}/>
+                        <FontAwesome name="envelope" size={24} color={BRAND_YELLOW} style={styles.icon}/>
                         <Text style={styles.text}>{t('contact.email')}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.row} onPress={() => openLink(CONTACT_INFO.website)}>
-                        <FontAwesome name="globe" size={24} color="#FFC107" style={styles.icon}/>
+                        <FontAwesome name="globe" size={24} color={BRAND_YELLOW} style={styles.icon}/>
                         <Text style={styles.text}>{t('contact.website')}</Text>
                     </TouchableOpacity>
                 </View>
@@ -48,11 +50,11 @@ export default function ContactScreen() {
 }
 
 const styles = StyleSheet.create({
-    safeArea: { flex: 1, backgroundColor: '#121212' },
+    safeArea: { flex: 1, backgroundColor: '#000000' },
     container: { flex: 1, justifyContent: 'center', padding: 20 },
     title: { fontSize: 32, fontWeight: 'bold', color: 'white', textAlign: 'center', marginBottom: 10 },
     subtitle: { fontSize: 16, color: '#A9A9A9', textAlign: 'center', marginBottom: 30 },
-    card: { backgroundColor: '#1E1E1E', borderRadius: 12, padding: 20 },
+    card: { backgroundColor: '#141414', borderRadius: 12, padding: 20, borderWidth: 1, borderColor: '#2a2a2a' },
     row: { flexDirection: 'row', alignItems: 'center', paddingVertical: 15 },
     icon: { width: 40, },
     text: { color: 'white', fontSize: 18 }

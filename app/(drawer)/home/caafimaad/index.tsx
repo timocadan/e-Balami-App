@@ -8,6 +8,8 @@ import { Alert, Animated, Dimensions, Image, Linking, Modal, Pressable, ScrollVi
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLanguage } from '../../../../contexts/LanguageContext';
 
+const SCREEN_WIDTH = Dimensions.get('window').width;
+
 export default function CaafimaadScreen() {
   const router = useRouter();
   const { t } = useLanguage();
@@ -23,9 +25,8 @@ export default function CaafimaadScreen() {
     { text: t('caafimaad.services.other'), key: 'other', icon: 'add-circle', iconFamily: MaterialIcons, type: 'modal' },
   ];
 
-const screenWidth = Dimensions.get('window').width;
   const glowAnim = useRef(new Animated.Value(1)).current;
-  const scrollAnim = useRef(new Animated.Value(screenWidth)).current;
+  const scrollAnim = useRef(new Animated.Value(SCREEN_WIDTH)).current;
   const [textWidth, setTextWidth] = useState(0);
 
   // Tallaabada 3: Ku dar state-ka maamulaya Modal-ka (popup-ka)
@@ -40,7 +41,7 @@ const screenWidth = Dimensions.get('window').width;
     ).start();
 
     const startMarqueeAnimation = () => {
-        scrollAnim.setValue(screenWidth);
+        scrollAnim.setValue(SCREEN_WIDTH);
         Animated.loop(
             Animated.timing(scrollAnim, {
                 toValue: -textWidth,
@@ -51,22 +52,20 @@ const screenWidth = Dimensions.get('window').width;
     };
 
     if (textWidth > 0) startMarqueeAnimation();
-  }, [textWidth]);
+  }, [glowAnim, scrollAnim, textWidth]);
 
   // ========== TALLAABADA 4: KU DAR SHAQADA FURAYSA WHATSAPP-KA ==========
-  const openWhatsApp = (serviceName: string) => {
-    const phoneNumber = "+251991301950"; // Lambarkaaga WhatsApp-ka
-    // Si sax ah u samee fariinta aad codsatay
-    const message = `Asc, waxaan ka socdaa dhanka App ka waxaan ubaahanahay: ${serviceName}.`;
+  const openWhatsApp = (message: string) => {
+    const phoneNumber = '+251991301950';
     const url = `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
     Linking.openURL(url).catch(() => {
-        Alert.alert(t('caafimaad.whatsappErrorTitle'), t('caafimaad.whatsappError'));
+      Alert.alert(t('caafimaad.whatsappErrorTitle'), t('caafimaad.whatsappError'));
     });
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={['bottom', 'left', 'right']}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
           <MaterialIcons name="arrow-back-ios" size={24} color="white" />
@@ -94,11 +93,15 @@ const screenWidth = Dimensions.get('window').width;
                 case 'navigate':
                   onPressAction = () => router.push({
                     pathname: '/home/caafimaad/adeegyada',
-                    params: { dalabNooc: 'single', adeeggaLaDoortay: service.text }
+                    params: {
+                      dalabNooc: 'single',
+                      adeeggaLaDoortay: service.text,
+                      adeeggaKey: service.key,
+                    },
                   });
                   break;
                 case 'whatsapp':
-                  onPressAction = () => openWhatsApp(service.text);
+                  onPressAction = () => openWhatsApp(t('caafimaad.whatsapp.flightMessage'));
                   break;
                 case 'modal':
                   onPressAction = () => setIsModalVisible(true);
@@ -109,7 +112,7 @@ const screenWidth = Dimensions.get('window').width;
 
               return (
                 <TouchableOpacity key={index} style={styles.card} onPress={onPressAction}>
-                  <IconComponent name={service.icon as any} size={28} color="#FFC107" />
+                  <IconComponent name={service.icon as any} size={28} color="#FFCC00" />
                   <Text style={styles.cardText}>{service.text}</Text>
                 </TouchableOpacity>
               );
@@ -139,11 +142,11 @@ const screenWidth = Dimensions.get('window').width;
                 <View style={styles.modalContent}>
                     <Text style={styles.modalTitle}>{t('caafimaad.additionalServices.title')}</Text>
                     
-                    <TouchableOpacity style={styles.modalButton} onPress={() => openWhatsApp(t('caafimaad.additionalServices.visaHelp'))}>
+                    <TouchableOpacity style={styles.modalButton} onPress={() => openWhatsApp(t('caafimaad.whatsapp.visaMessage'))}>
                         <Text style={styles.modalButtonText}>{t('caafimaad.additionalServices.visaHelp')}</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.modalButton} onPress={() => openWhatsApp(t('caafimaad.additionalServices.embassyBooking'))}>
+                    <TouchableOpacity style={styles.modalButton} onPress={() => openWhatsApp(t('caafimaad.whatsapp.embassyMessage'))}>
                         <Text style={styles.modalButtonText}>{t('caafimaad.additionalServices.embassyBooking')}</Text>
                     </TouchableOpacity>
 
@@ -161,24 +164,24 @@ const screenWidth = Dimensions.get('window').width;
 
 // ========== TALLAABADA 7: KU DAR STYLE-KA LOOGU TALAGALAY MODAL-KA ==========
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: '#121212' },
+  safeArea: { flex: 1, backgroundColor: '#000000' },
   scrollView: { paddingBottom: 40 },
   backButton: { position: 'absolute', top: 40, left: 20, zIndex: 10, backgroundColor: 'rgba(0,0,0,0.4)', padding: 8, borderRadius: 20 },
   bannerImage: { width: '100%', height: 335, resizeMode: 'cover' },
   headerContainer: { marginTop: -70, width: '100%', overflow: 'hidden', paddingVertical: 20 },
   headerTitle: { fontSize: 16, fontWeight: 'bold', color: 'white' },
   contentContainer: { padding: 20, paddingTop: 10 },
-  sectionTitle: { fontSize: 24, fontWeight: 'bold', color: '#FFC107', marginTop: 10, textAlign: 'center' },
+  sectionTitle: { fontSize: 24, fontWeight: 'bold', color: '#FFCC00', marginTop: 10, textAlign: 'center' },
   sectionSubtitle: { fontSize: 16, color: '#A9A9A9', marginTop: 8, marginBottom: 20, textAlign: 'center' },
   servicesGrid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' },
   card: { width: '48%', backgroundColor: '#1E1E1E', padding: 20, borderRadius: 12, alignItems: 'center', marginBottom: 15, justifyContent: 'center', height: 120 },
   cardText: { color: 'white', marginTop: 10, fontSize: 14, textAlign: 'center' },
-  mainButton: { backgroundColor: '#FFC107', paddingVertical: 18, borderRadius: 12, alignItems: 'center', marginHorizontal: 20, marginTop: 20 },
-  mainButtonText: { color: '#121212', fontSize: 18, fontWeight: 'bold' },
+  mainButton: { backgroundColor: '#FFCC00', paddingVertical: 18, borderRadius: 12, alignItems: 'center', marginHorizontal: 20, marginTop: 20 },
+  mainButtonText: { color: '#000000', fontSize: 18, fontWeight: 'bold' },
   // Styles-ka cusub ee Modal-ka
   modalOverlay: { flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.7)', justifyContent: 'center', alignItems: 'center' },
   modalContent: { backgroundColor: '#1E1E1E', width: '85%', padding: 20, borderRadius: 15, alignItems: 'center' },
-  modalTitle: { fontSize: 22, fontWeight: 'bold', color: '#FFC107', marginBottom: 20 },
+  modalTitle: { fontSize: 22, fontWeight: 'bold', color: '#FFCC00', marginBottom: 20 },
   modalButton: { backgroundColor: '#333', width: '100%', paddingVertical: 15, borderRadius: 10, marginBottom: 10 },
   modalButtonText: { color: 'white', fontSize: 16, textAlign: 'center' },
   closeButton: { marginTop: 10, padding: 10 },

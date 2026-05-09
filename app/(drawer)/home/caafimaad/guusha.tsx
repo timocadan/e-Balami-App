@@ -30,10 +30,10 @@ export default function GuushaScreen() {
                 }),
             ])
         ).start();
-    }, []);
+    }, [pulseAnim]);
 
     return (
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView style={styles.safeArea} edges={['bottom', 'left', 'right']}>
             <View style={styles.container}>
                 {/* WAA KAN SANDUUQA CUSUB OO AANU KU DABBAQNAY ANIMATION-KA */}
                 <Animated.View style={[styles.frame, { transform: [{ scale: pulseAnim }] }]}>
@@ -46,7 +46,7 @@ export default function GuushaScreen() {
                     <Text style={styles.subtitle}>
                         {t('caafimaad.success.message')}
                     </Text>
-                    <TouchableOpacity style={styles.button} onPress={() => router.replace('/home')}>
+                    <TouchableOpacity style={styles.button} onPress={() => router.replace('/(drawer)/home')}>
                         <Text style={styles.buttonText}>{t('caafimaad.success.backToHome')}</Text>
                     </TouchableOpacity>
                     

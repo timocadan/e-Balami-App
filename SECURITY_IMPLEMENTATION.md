@@ -40,13 +40,10 @@
 
 ### 4. **Route Parameter Validation** ✅
 - **Fixed**: All components now validate route parameters before use
-- **Components Updated**:
-  - `app/(tabs)/home/caafimaad/form.tsx`
-  - `app/(tabs)/home/caafimaad/goobta.tsx`
-  - `app/(tabs)/home/caafimaad/bixinta.tsx`
-  - `app/(tabs)/home/farsamo/form.tsx`
-  - `app/(tabs)/home/farsamo/faahfaahin.tsx`
-  - `app/(tabs)/home/farsamo/bixinta.tsx`
+- **Components Updated** (medical travel flow):
+  - `app/(drawer)/home/caafimaad/form.tsx`
+  - `app/(drawer)/home/caafimaad/goobta.tsx`
+  - `app/(drawer)/home/caafimaad/bixinta.tsx`
 
 ### 5. **Input Length Limits** ✅
 - **Added**: `MAX_LENGTHS` constants for all input fields

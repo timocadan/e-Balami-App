@@ -1,10 +1,13 @@
 # eBalami App
 
-eBalami is a multilingual mobile application built with React Native and Expo for requesting medical and technical services. It supports Somali (default), English, and Amharic, and includes order creation, validation, and Firebase Firestore integration.
+eBalami is a multilingual mobile application built with React Native and Expo for **medical travel** requests. It supports Somali (default), English, and Amharic, and includes authentication, guest access, order creation, in-app notifications, validation, and Firebase Firestore integration.
 
 ## Key Features
 
-- Dual service flows: Medical (`Caafimaad`) and Technical (`Farsamo`)
+- Medical travel flow (`Caafimaad`): service selection, details, location, summary, confirmation
+- Email/password authentication and guest login
+- Drawer navigation with profile, language switching, and polished logout controls
+- In-app notifications for public and user-targeted messages
 - Multilingual UI (Somali, English, Amharic)
 - Draft-to-confirmed order lifecycle in Firestore
 - Form validation and input security helpers
@@ -15,17 +18,17 @@ eBalami is a multilingual mobile application built with React Native and Expo fo
 
 - React Native `0.81.5`
 - React `19.1.0`
-- Expo SDK `54.0.21`
+- Expo SDK `54.0.33`
 - TypeScript `~5.9.2`
-- Expo Router `~6.0.14`
-- Firebase `^12.4.0` (Firestore)
+- Expo Router `~6.0.23`
+- Firebase `^12.4.0` (Auth, Firestore)
 
 ## Project Structure
 
 ```text
 app/                Expo Router screens and flows
 components/         Reusable UI components
-contexts/           Global context providers (language)
+contexts/           Global context providers (auth, language)
 translations/       i18n JSON files (so/en/am)
 utils/              Validation and security utilities
 assets/images/      App images and icons
@@ -88,29 +91,28 @@ npm run reset-project
 
 ## Architecture Overview
 
-### Medical Flow (`Caafimaad`)
+### Medical travel flow (`Caafimaad`)
 
-`Home -> Caafimaad -> Service Selection -> Form -> Location -> Summary -> Success`
+`Login/Guest → Home → Caafimaad → Service selection → Form → Location → Summary → Success`
 
-### Technical Flow (`Farsamo`)
+### Notifications
 
-`Home -> Farsamo -> Service Selection -> Location -> Form -> Details -> Summary -> Success`
+The app reads from the Firestore `notifications` collection and displays messages where `target` is `all` or `userId` matches the signed-in user.
 
-### Data Lifecycle
+### Data lifecycle
 
-1. User submits details to draft collections.
-2. User confirms order on summary screen.
-3. Order is moved to confirmed collections.
+1. User submits details to the draft collection.
+2. User confirms the order on the summary screen.
+3. Order is moved to the confirmed collection.
 4. Admin dashboard consumes confirmed data.
 
-## Firestore Collections
+## Firestore collections (app)
 
-- Draft medical: `dalabyadaAanDhamaystirnayn`
-- Draft technical: `dalabyadaFarsamoQabyoAh`
-- Confirmed medical: `dalabyadaDhamaystiran`
-- Confirmed technical: `dalabyadaFarsamada`
+- Draft orders: `dalabyadaAanDhamaystirnayn`
+- Confirmed orders: `dalabyadaDhamaystiran`
+- Notifications: `notifications`
 
-## Deployment Notes
+## Deployment notes
 
 - Build with EAS:
   ```bash
